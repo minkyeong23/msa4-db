@@ -56,6 +56,7 @@ SELECT
 	,gender
 	,AVG(salary)
 FROM salaries, employees
+WHERE employees.emp_id = salaries.emp_id
 GROUP BY employees.emp_id, `name`, gender HAVING AVG(salary) >= 70000000;
 
 -- 10. 현재 직급이 'T005'인,
